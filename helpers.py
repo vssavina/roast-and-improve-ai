@@ -8,7 +8,7 @@ def ensure_data_dir_exists() -> Path:
     Ensure that a 'data' directory exists, create one if it doesn't and return its path
 
     Returns:
-        Path: The absolute path to the 'data' directory.
+        Path: The absolute path to the 'data' directory
     """
     root = Path(__file__).resolve().parent
     data_dir = root / "data"
