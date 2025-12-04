@@ -3,6 +3,16 @@ from typing import List, Dict, Any
 import json
 
 
+def load_json(path: Path) -> List[Dict[str, Any]]:
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+    
+    
+def save_text_file(report: str, path: Path) -> None:
+    with path.open("w", encoding="utf-8") as f:
+        f.write(report)
+
+
 def ensure_data_dir_exists() -> Path:
     """
     Ensure that a 'data' directory exists, create one if it doesn't and return its path
